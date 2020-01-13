@@ -1,0 +1,82 @@
+body {
+    background-color:#555555;
+    font-family:Microsoft YaHei;
+}
+
+.div-search {
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.search-input:required, .search-input:invalid {
+    box-shadow: none;
+}
+.search-input {
+    width: 50%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 16px;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+input {
+    text-rendering: auto;
+    color: -internal-light-dark-color(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textfield;
+    background-color: -internal-light-dark-color(white, black);
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+.common-button {
+    border:0;
+    display:inline-block;
+	background-color:#e67e22;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Microsoft YaHei;
+	font-size:16px;
+	padding:8px 18px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #2f6627;
+}
+.common-button:hover {
+	background-color:#bf6516;
+}
+
+h3 {
+    color:#eeeeee;
+}
+
+a:hover {
+    color: #733B90;
+}
+a:visited {
+    color: #576637;
+}
+a:link {
+    color: #68923A;
+}
+a:active, a:hover {
+    outline: 0;
+}
+a {
+    background: transparent;
+}

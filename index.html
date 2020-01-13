@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<script type="text/javascript">
+function toGoogle()
+{
+	var param = document.getElementById("searchKey").value
+	window.open("https://www.google.com/search?q=" + param, "_blank")
+}
+
+function toBing()
+{
+	var param = document.getElementById("searchKey").value
+	window.open("https://cn.bing.com/search?q=" + param, "_blank")
+}
+
+function toBaidu()
+{
+	var param = document.getElementById("searchKey").value
+	window.open("https://www.baidu.com/s?wd=" + param, "_blank")
+}
+</script>
+
+<link rel="stylesheet" href="./navi.css">
+</head>
+
+<body>
+
+<div class="div-search">
+<input id="searchKey" class="search-input" type="text" placeholder="Search Something"/>
+<button class="common-button" onClick="toGoogle()">谷歌</button>
+<button class="common-button" onClick="toBing()">必应</button>
+<button class="common-button" onClick="toBaidu()">百度</button>
+</div>
+
+<div>
+<h3>常用网址</h3>
+<table border="1">
+<tr>
+<td><a href="https://ermao.live/ target="_blank"">博客</a></td>
+<td><a href="https://github.com/ target="_blank"">github</a></td>
+<td><a href="https://stackoverflow.com/ target="_blank"">stackoverflow</a></td>
+</tr>
+<tr>
+<td><a href="https://ermao.live/ target="_blank"">腾讯视频</a></td>
+<td><a href="https://github.com/ target="_blank"">优酷</a></td>
+</tr>
+</table>
+</div>
+
+<div>
+<h3>收藏夹</h3>
+<table border="1">
+<tr>
+<td>
+Unity
+<select>
+<option value="https://docs.unity3d.com/2018.4/Documentation/Manual/">2018.4文档</option>
+</select>
+</td>
+<td>
+Android
+<select>
+<option value="https://docs.unity3d.com/2018.4/Documentation/Manual/">2018.4文档</option>
+</select>
+</td>
+</tr>
+</table>
+</div>
+</body>
+
+</html>
