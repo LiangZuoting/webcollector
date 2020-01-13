@@ -20,6 +20,10 @@ function toBaidu()
 	var param = document.getElementById("searchKey").value
 	window.open("https://www.baidu.com/s?wd=" + param, "_blank")
 }
+
+function onSelectChange(select) {
+    window.open(select.value, "_blank")
+}
 </script>
 
 <link rel="stylesheet" href="./navi.css">
@@ -27,8 +31,8 @@ function toBaidu()
 
 <body>
 
-<div class="div-search">
-<input id="searchKey" class="search-input" type="text" placeholder="Search Something"/>
+<div>
+<input id="searchKey" class="search-input" type="text" placeholder="Search Something" onkeyup="if (event.keyCode == 13) { toGoogle() }"/>
 <button class="common-button" onClick="toGoogle()">谷歌</button>
 <button class="common-button" onClick="toBing()">必应</button>
 <button class="common-button" onClick="toBaidu()">百度</button>
@@ -36,33 +40,97 @@ function toBaidu()
 
 <div>
 <h3>常用网址</h3>
-<table border="1">
+<table>
 <tr>
-<td><a href="https://ermao.live/ target="_blank"">博客</a></td>
-<td><a href="https://github.com/ target="_blank"">github</a></td>
-<td><a href="https://stackoverflow.com/ target="_blank"">stackoverflow</a></td>
+<td><a href="https://ermao.live/" target="_blank">博客</a></td>
+<td><a href="https://github.com/" target="_blank">github</a></td>
+<td><a href="https://stackoverflow.com/" target="_blank">stackoverflow</a></td>
+<td><a href="https://en.cppreference.com/w/" target="_blank">cppreference</a></td>
+<td><a href="https://aplus.huya.com/#/home/buildProject/index" target="_blank">构建系统</a></td>
+<td><a href="https://www.zhihu.com/" target="_blank">知乎</a></td>
 </tr>
 <tr>
-<td><a href="https://ermao.live/ target="_blank"">腾讯视频</a></td>
-<td><a href="https://github.com/ target="_blank"">优酷</a></td>
+<td><a href="https://ermao.live/" target="_blank">腾讯视频</a></td>
+<td><a href="https://github.com/" target="_blank">优酷</a></td>
+<td><a href="https://www.douyu.com/62081" target="_blank">叶落直播间</a></td>
+<td><a href="https://www.huya.com/11352915" target="_blank">老白涮肉坊</a></td>
 </tr>
 </table>
+<hr/>
 </div>
 
 <div>
 <h3>收藏夹</h3>
-<table border="1">
+<table>
 <tr>
 <td>
-Unity
-<select>
+<select onchange="onSelectChange(this)">
+<option value="" disabled selected>公司</option>
+<option value="https://oa.huya.com/index.html#/mains">OA</option>
+</select>
+</td>
+<td>
+<select onchange="onSelectChange(this)">
+<option value="" disabled selected>C++</option>
+<option value="https://en.cppreference.com/w/">C++ Reference</option>
+</select>
+</td>
+<td>
+<select onchange="onSelectChange(this)">
+<option value="" disabled selected>Unity</option>
 <option value="https://docs.unity3d.com/2018.4/Documentation/Manual/">2018.4文档</option>
 </select>
 </td>
 <td>
-Android
-<select>
-<option value="https://docs.unity3d.com/2018.4/Documentation/Manual/">2018.4文档</option>
+<select onchange="onSelectChange(this)">
+<option value="" disabled selected>Android</option>
+<option value="https://developer.android.com/ndk/guides/stable_apis">NDK API</option>
+</select>
+</td>
+<td>
+<select onchange="onSelectChange(this)">
+<option value="" disabled selected>Ffmpeg</option>
+<option value="https://blog.csdn.net/leixiaohua1020">雷神博客</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+<select onchange="onSelectChange(this)">
+<option value="" disabled selected>TCP/IP</option>
+<option value="https://blog.csdn.net/tianlongtc/article/details/80238497">TCP快速重传为什么是三次冗余ack</option>
+</select>
+</td>
+<td>
+<select onchange="onSelectChange(this)">
+<option value="" disabled selected>iOS</option>
+<option value="https://www.jianshu.com/p/eccdcf43d7d2">iOS视频开发（一）：视频采集</option>
+</select>
+</td>
+<td>
+<select onchange="onSelectChange(this)">
+<option value="" disabled selected>OpenGL ES</option>
+<option value="http://toughcoder.net/blog/2018/07/31/introduction-to-opengl-es-2-dot-0/">年轻人的第一篇OpenGL ES 2.0教程</option>
+</select>
+</td>
+<td>
+<select onchange="onSelectChange(this)">
+<option value="" disabled selected>Kotlin</option>
+<option value="https://www.kotlincn.net/docs/tutorials/android-plugin.html">Kotlin Android扩展</option>
+</select>
+</td>
+<td>
+<select onchange="onSelectChange(this)">
+<option value="" disabled selected>多媒体</option>
+<option value="https://blog.csdn.net/sphone89/article/details/17492433">h264 profile & level</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+<select onchange="onSelectChange(this)">
+<option value="" disabled selected>其它</option>
+<option value="https://man.linuxde.net/">Linux命令大全</option>
 </select>
 </td>
 </tr>
