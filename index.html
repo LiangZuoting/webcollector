@@ -1,41 +1,77 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <script type="text/javascript">
 function toGoogle()
 {
-var param = document.getElementById("searchKey").value
+let param = document.getElementById("searchKey").value
 window.open("https://www.google.com/search?q=" + param, "_blank")
 }
 
 function toBing()
 {
-var param = document.getElementById("searchKey").value
+let param = document.getElementById("searchKey").value
 window.open("https://cn.bing.com/search?q=" + param, "_blank")
 }
 
 function toBaidu()
 {
-var param = document.getElementById("searchKey").value
+let param = document.getElementById("searchKey").value
 window.open("https://www.baidu.com/s?wd=" + param, "_blank")
 }
 
-function onSelectChange(select) {
-window.open(select.value, "_blank")
+function onLoad() {
+let request = new XMLHttpRequest();
+request.open("get", "favorite.json");
+request.responseType = "text";
+request.send();
+request.onload = function() {
+let table = document.getElementById("favoriteTable");
+let data = request.response;
+let root = JSON.parse(data);
+let categories = root["categories"];
+let row;
+for (let i = 0; i < categories.length; ++i) {
+let category = categories[i];
+if (i % 4 == 0) {
+row = table.insertRow(i / 4);
+}
+let cell = row.insertCell(0);
+let sel = document.createElement("select");
+cell.appendChild(sel);
+sel.addEventListener("change", function() {
+window.open(sel.value, "_blank");
+sel.selectedIndex = 0;
+});
+let head = document.createElement("option");
+sel.appendChild(head);
+head.text = category.name;
+head.disabled = true;
+head.selected = true;
+let sites = category.sites;
+for (let i = 0; i < sites.length; ++i) {
+let site = sites[i];
+let op = document.createElement("option");
+sel.appendChild(op);
+op.value = site.url;
+op.text = site.title;
+}
+}
+};
 }
 </script>
 
 <link rel="stylesheet" href="navi.css">
 </head>
 
-<body>
+<body onload="onLoad()">
 
 <div>
-<input id="searchKey" class="search-input" type="text" placeholder="Search Something" onkeyup="if (event.keyCode == 13) { toGoogle() }"/>
-<button class="common-button" onClick="toGoogle()">谷歌</button>
-<button class="common-button" onClick="toBing()">必应</button>
-<button class="common-button" onClick="toBaidu()">百度</button>
+<input id="searchKey" class="search-input" type="text" placeholder="Search Something" onkeyup="if (event.keyCode == 13) { toGoogle() }">
+<button class="common-button" onclick="toGoogle()">谷歌</button>
+<button class="common-button" onclick="toBing()">必应</button>
+<button class="common-button" onclick="toBaidu()">百度</button>
 </div>
 
 <div>
@@ -47,7 +83,7 @@ window.open(select.value, "_blank")
 <td><a href="https://github.com/" target="_blank">github</a></td>
 <td><a href="https://stackoverflow.com/" target="_blank">stackoverflow</a></td>
 <td><a href="https://en.cppreference.com/w/" target="_blank">cppreference</a></td>
-<td><a href="https://www.ffmpeg.org/documentation.html" target="_blank">Ffmpeg文档</td>
+<td><a href="https://www.ffmpeg.org/documentation.html" target="_blank">Ffmpeg文档</a></td>
 </tr>
 <tr>
 <td><a href="https://tech.sina.com.cn/" target="_blank">新浪科技</a></td>
@@ -67,207 +103,14 @@ window.open(select.value, "_blank")
 <td><a href="https://www.ctrip.com/" target="_blank">携程</a></td>
 </tr>
 </table>
-<hr/>
+<hr>
 </div>
 
 <div>
 <h2>收藏夹</h2>
-<table>
-<tr>
-<td>
-<select onchange="onSelectChange(this)">
-<option value="" disabled selected>公司</option>
-<option value="https://oa.huya.com/index.html#/mains">OA</option>
-<option value="https://ffilelogweb.huya.com/indexpage.html">日志后台</option>
-<option value="http://webdb.yyembed.yy.com/webdb">YY UID查询</option>
-<option value="https://jenkins.huya.com/">jenkins构建</option>
-<option value="https://www.tapd.cn/39551029/board/index?board_id=1139551029001000094&board_type=standard&view_type=standard-board">看板-主播基础平台组-TAPD平台</option>
-<option value="https://sre.huya.com/">sre业务支持系统</option>
-<option value="http://admin.huya.com/login/">游戏直播管理后台</option>
-</select>
-</td>
-<td>
-<select onchange="onSelectChange(this)">
-<option value="" disabled selected>C++</option>
-<option value="https://en.cppreference.com/w/">C++ Reference</option>
-<option value="http://coliru.stacked-crooked.com/">coliru在线编译</option>
-<option value="https://www.codingame.com/playgrounds/2205/7-features-of-c17-that-will-simplify-your-code/introduction">7 Features of C++17 that will simplify your code</option>
-<option value="https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md">C++ Core Guidelines</option>
-</select>
-</td>
-<td>
-<select onchange="onSelectChange(this)">
-<option value="" disabled selected>Unity</option>
-<option value="https://docs.unity3d.com/2018.4/Documentation/Manual/">2018.4文档</option>
-<option value="https://zhuanlan.zhihu.com/p/28905447">【Unity】UGUI系列教程————UGUI基础！界面拼接！</option>
-<option value="https://docs.unity3d.com/2018.2/Documentation/Manual/ExecutionOrder.html">Unity - Manual: Execution Order of Event Functions</option>
-<option value="https://docs.unity3d.com/Manual/android-GettingStarted.html">Unity - Manual: Getting started with Android development</option>
-<option value="https://www.w3cschool.cn/unity3d_jc/unity3d_jc-8lea2dkb.html">Unity教程 用户界面（UI）_w3cschool</option>
-<option value="https://unity2018.docs.zlogn.com/">Unity 2018.4 中文手册 中文文档</option>
-<option value="https://www.mirimad.com/unity-play-video-on-canvas/">Unity Play Video On Canvas | Learn Unity Mir Imad Ahmed</option>
-<option value="https://forum.unity.com/threads/change-detect-video-orientation.546450/">Video - Change/Detect video orientation</option>
-<option value="https://www.youtube.com/watch?v=RxlQnPcOoYc">360 VIDEO PLAYER (with VR mode) - Unity Tutorial - YouTube</option>
-</select>
-</td>
-<td>
-<select onchange="onSelectChange(this)">
-<option value="" disabled selected>Android</option>
-<option value="https://my.oschina.net/lifj/blog/709188">［直播一揽子］x264 for Android 的编译</option>
-<option value="https://blog.csdn.net/chinabinlang/article/details/46898961">X264的ARMV7-a的交叉编译及优化运行</option>
-<option value="https://blog.csdn.net/xyang81/article/details/42319789">Android NDK开发Crash错误定位</option>
-<option value="https://www.jianshu.com/p/73fed068a795">Android Camera2 使用总结</option>
-<option value="https://www.jianshu.com/p/d83161e77e90">Android进阶——你所知道的Camera2和你所不知道的Camera2完全解析</option>
-<option value="https://source.android.com/devices/graphics/arch-egl-opengl">EGLSurface 和 OpenGL ES  |  Android Open Source Project</option>
-<option value="https://www.jianshu.com/p/c085af435d88">「音视频直播技术」Android下视频H264编码</option>
-<option value="https://juejin.im/post/5aefdb2c51882522835e6542">《OpenGL ES 2.0 for Android》读书笔记</option>
-<option value="https://www.khronos.org/registry/EGL/">Khronos EGL Registry - The Khronos Group Inc</option>
-<option value="https://developer.android.com/training/graphics/opengl/environment#java">Build an OpenGL ES environment  |  Android Developers</option>
-<option value="https://source.android.com/devices/graphics/architecture.html">图形架构  |  Android Open Source Project</option>
-<option value="https://blog.csdn.net/cmsbupt/article/details/9815685">Android系统中YUV420p (NV21)到ARGB8888的转换</option>
-<option value="https://mp.weixin.qq.com/s/0xek4nnc2zoKpslEyILQmw?comefrom=https://blogread.cn/news/">总是听到有人说AndroidX，到底什么是AndroidX？</option>
-<option value="https://developer.android.com/guide/topics/media/camera">Camera API  |  Android Developers</option>
-<option value="https://developer.android.com/ndk/guides/audio/opensl/opensl-prog-notes.html#kotlin">OpenSL ES 编程说明  |  Android NDK  |  Android Developers</option>
-<option value="https://developer.android.com/ndk/guides/audio/opensl/opensl-for-android">面向 Android 的 OpenSL ES  |  Android NDK  |  Android Developers</option>
-<option value="https://developer.android.com/ndk/guides/stable_apis">Android NDK 原生 API  |  Android Developers</option>
-<option value="http://www.soomal.com/doc/10100006276.htm">Gabor、Patrick作品 - Android的10毫秒问题 解读Android系统音频通道延迟缺陷[Soomal]</option>
-<option value="https://developer.android.com/ndk/guides/audio/audio-latency?hl=zh-cn">音频延迟  |  Android NDK  |  Android Developers</option>
-</select>
-</td>
-</tr>
-<tr>
-<td>
-<select onchange="onSelectChange(this)">
-<option value="" disabled selected>TCP/IP</option>
-<option value="https://gist.github.com/gabrielfalcao/4216897">TCP socket error codes</option>
-<option value="https://blog.csdn.net/tianlongtc/article/details/80238497">TCP快速重传为什么是三次冗余ack</option>
-<option value="https://www.zhihu.com/question/21789252">TCP快速重传为什么是三次冗余ack，这个三次是怎么定下来的？</option>
-<option value="https://www.cnblogs.com/wetest/p/9190786.html">可靠UDP，KCP协议快在哪？</option>
-<option value="https://blog.csdn.net/qq_36748278/article/details/80171575">KCP原理及源码解析</option>
-<option value="https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md">Checking out and Building Chromium for Windows</option>
-<option value="http://jagt.github.io/clumsy/cn/manual.html">clumsy, 在 Windows Vista / Windows 7 下模拟劣化网络环境(网络延迟，掉包，重发)的小工具。</option>
-<option value="https://zhuanlan.zhihu.com/p/32553477">科普：QUIC协议原理分析</option>
-</select>
-</td>
-<td>
-<select onchange="onSelectChange(this)">
-<option value="" disabled selected>iOS</option>
-<option value="https://www.jianshu.com/p/eccdcf43d7d2">iOS视频开发（一）：视频采集</option>
-<option value="https://blog.csdn.net/lincsdnnet/article/details/78255773">iOS - 视频采集详解</option>
-<option value="https://www.jianshu.com/p/9809760654ea">iOS-镜头采集(AVCaptureDevice)</option>
-<option value="https://www.jianshu.com/p/019f59a37e1e">iOS-镜头采集(Camera capture&amp;AVCaptureSession)</option>
-<option value="https://www.jianshu.com/p/d99366dd19e4">iOS 相机捕捉</option>
-<option value="https://www.jianshu.com/p/8b28892bae5a">30分钟搞定iOS自定义相机</option>
-<option value="https://www.jianshu.com/p/8c7ca1dd7f02">iOS-AVFoundation自定义相机详解</option>
-<option value="https://stackoverflow.com/questions/588866/whats-the-difference-between-the-atomic-and-nonatomic-attributes">ios - What&#39;s the difference between the atomic and nonatomic attributes? - Stack Overflow</option>
-<option value="https://github.com/skyming/iOS-Performance-Optimization">skyming/iOS-Performance-Optimization: 关于iOS 性能优化梳理、内存泄露、卡顿、网络、GPU、电量、 App 包体积瘦身、启动速度优化等、Instruments 高级技巧、常见的优化技能- Get — Edit</option>
-<option value="https://github.com/qinjx/30min_guides/blob/master/ios.md">30min_guides/ios.md at master · qinjx/30min_guides</option>
-<option value="https://stackoverflow.com/questions/5887248/ios-app-maximum-memory-budget">iphone - ios app maximum memory budget - Stack Overflow</option>
-<option value="https://blog.csdn.net/bxjie/article/details/39581565">关于airplay协议实现镜像功能研究</option>
-<option value="https://depthlove.github.io/2015/09/16/build-X264-library-for-iOS-platform/">编译iOS平台上使用的X264库 | Minmin.Sun Blog</option>
-</select>
-</td>
-<td>
-<select onchange="onSelectChange(this)">
-<option value="" disabled selected>OpenGL ES</option>
-<option value="http://toughcoder.net/blog/2018/07/31/introduction-to-opengl-es-2-dot-0/">年轻人的第一篇OpenGL ES 2.0教程</option>
-<option value="https://blog.csdn.net/kesalin/column/info/opengl-es2-ios">OpenGL ES 2.0 iOS教程</option>
-</select>
-</td>
-<td>
-<select onchange="onSelectChange(this)">
-<option value="" disabled selected>Kotlin</option>
-<option value="https://www.kotlincn.net/docs/tutorials/android-plugin.html">Kotlin Android扩展</option>
-</select>
-</td>
-</tr>
-<tr>
-<td>
-<select onchange="onSelectChange(this)">
-<option value="" disabled selected>多媒体</option>
-<option value="http://blog.csdn.net/leixiaohua1020">雷神博客</option>
-<option value="http://blog.csdn.net/u011270282/article/details/42058617">h.264保存flv文件</option>
-<option value="http://blog.csdn.net/yeyumin89/article/details/7932368">将h.264视频流封装成flv格式文件（一.flv格式）</option>
-<option value="http://blog.csdn.net/yeyumin89/article/details/7932431">将h.264视频流封装成flv格式文件（二.开始动手）</option>
-<option value="https://segmentfault.com/a/1190000007361184">FLV文件格式解析</option>
-<option value="http://blog.csdn.net/leixiaohua1020/article/details/17934487">视音频编解码学习工程：FLV封装格式分析器</option>
-<option value="http://www.tuicool.com/articles/vu2Mvy">FLV视频封装格式详解</option>
-<option value="http://blog.csdn.net/zhuweigangzwg/article/details/25815851">音视频同步(播放)原理</option>
-<option value="http://developer.t-firefly.com/thread-5731-1-1.html">音视频同步和视频帧率控制的原理和实现</option>
-<option value="http://blog.csdn.net/Byeweiyang/article/details/78134674">实时视频传输的关键技术 H.264 全解析</option>
-<option value="http://blog.csdn.net/shangmingyang/article/details/50837852">带你吃透RTMP</option>
-<option value="http://blog.csdn.net/liuxingen/article/details/45420455">字节序(byte order)和位序(bit order)</option>
-<option value="https://blog.csdn.net/leixiaohua1020/article/details/11694129">RTMP规范简单分析</option>
-<option value="https://my.oschina.net/u/213072/blog/52053">FLV视频封装格式详解</option>
-<option value="https://depthlove.github.io/2015/11/13/flv-analysis-in-rtmp-live-play/">rtmp直播推流（一）－－flv格式解析与封装 | Minmin.Sun Blog</option>
-<option value="https://blog.csdn.net/sphone89/article/details/17492433">h264 profile &amp; level</option>
-<option value="http://www.lighterra.com/papers/videoencodingh264/">Video Encoding Settings for H.264 Excellence</option>
-</select>
-</td>
-<td>
-<select onchange="onSelectChange(this)">
-<option value="" disabled selected>Ffmpeg</option>
-<option value="https://blog.csdn.net/leixiaohua1020">雷神博客</option>
-<option value="https://www.ffmpeg.org/ffmpeg-filters.html#format-1">FFmpeg Filters Documentation</option>
-<option value="https://blog.csdn.net/fireroll/article/details/8607954">为ffmpeg添加自定义滤镜</option>
-<option value="https://blog.csdn.net/dancing_night/article/details/46348515">把自定义的demuxer加入ffmpeg源码</option>
-<option value="https://blog.csdn.net/wstarx/article/details/1572393">FFMpeg框架代码阅读</option>
-<option value="https://blog.csdn.net/m0_37402140/article/details/77963538">ffmpeg八大模块及常用函数介绍</option>
-<option value="https://blog.csdn.net/leixiaohua1020/article/details/15811977">[总结]FFMPEG视音频编解码零基础学习方法</option>
-<option value="https://juejin.im/post/5cad73425188251aee3a5624">三、ffplay、ffmpeg日常食用的简单姿势</option>
-<option value="https://blog.csdn.net/Contex_A17/article/details/82014826">ffmpeg倒放音视频</option>
-<option value="https://blog.csdn.net/vbLittleBoy/article/details/8587745">关于ffmpeg如何提取视频的关键帧的问题</option>
-<option value="https://www.jianshu.com/p/0f2d762c4d1d">FFMpeg中seek函数解析</option>
-<option value="https://blog.csdn.net/leixiaohua1020/article/details/44220151">FFmpeg源代码结构图 - 解码</option>
-<option value="https://blog.csdn.net/CHNIM/article/details/80852806">ffmpeg实现视频倒播（基于opencv方法）</option>
-<option value="https://stackoverflow.com/questions/42257354/concat-a-video-with-itself-but-in-reverse-using-ffmpeg">Concat a video with itself, but in reverse, using ffmpeg - Stack Overflow</option>
-<option value="https://blog.csdn.net/ternence_hsu/article/details/85865718">ffmpeg 视频倍速播放 和 慢速播放</option>
-<option value="https://zhuanlan.zhihu.com/p/44615185">ffplay音视频同步分析——基础概念</option>
-<option value="https://juejin.im/post/5cad790f51882518b87e1404">十、详解FFplay音视频同步</option>
-<option value="https://blog.csdn.net/lrzkd/article/details/78661841">ffplay播放器音视频同步原理</option>
-<option value="https://my.oschina.net/u/735973/blog/806117">ffmpeg音视频同步---视频同步到音频时钟</option>
-<option value="https://superuser.com/questions/1189472/make-a-clip-from-a-video-with-ffmpeg">Make a clip from a video with FFMPEG</option>
-</select>
-</td>
-<td>
-<select onchange="onSelectChange(this)">
-<option value="" disabled selected>CMake</option>
-<option value="https://www.cnblogs.com/zl1991/p/6526613.html">CMakeLists.txt写法</option>
-<option value="https://elloop.github.io/tools/2016-04-10/learning-cmake-2-commands">CMake 常用命令和变量</option>
-<option value="https://blog.csdn.net/a794226986/article/details/18616511">cmake处理多源文件目录的方法</option>
-<option value="https://stackoverflow.com/questions/52183875/create-cmake-c-c-library-to-android-without-android-studio">Create (Cmake) C/C++ Library to Android without Android Studio</option>
-<option value="https://owent.net/2017/1405.html">用cmake交叉编译到iOS和Android</option>
-<option value="https://fucknmb.com/2017/06/27/cmake-%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/">cmake交叉编译</option>
-<option value="https://zhuanlan.zhihu.com/p/24535328">更简单的CMake交叉编译</option>
-</select>
-</td>
-<td>
-<select onchange="onSelectChange(this)">
-<option value="" disabled selected>Lua</option>
-<option value="https://www.w3cschool.cn/doc_lua_5_3/dict">Lua 5.3 词典 速查词典|Lua 5.3 词典 API中文手册|Lua 5.3 词典参考文档_w3cschool</option>
-<option value="https://wowwiki.fandom.com/wiki/WoW_AddOn">WoW AddOn | WoWWiki | FANDOM powered by Wikia</option>
-<option value="https://wowwiki.fandom.com/wiki/UI_FAQ/AddOn_Author_Resources#Resources">UI FAQ/AddOn Author Resources | WoWWiki | FANDOM powered by Wikia</option>
-<option value="https://bbs.nga.cn/read.php?tid=14839516">[狂暴][PVE]8.2争霸艾泽拉斯狂暴专精指南[08/20更新狂暴战8.2版本木桩讲解视频] NGA玩家社区</option>
-<option value="http://wowprogramming.com/">Home Page - World of Warcraft Programming: A Guide and Reference for Creating WoW Addons</option>
-<option value="https://github.com/LewisJEllis/awesome-lua">LewisJEllis/awesome-lua: A curated list of quality Lua packages and resources.</option>
-<option value="https://luarocks.org/">LuaRocks - The Lua package manager</option>
-<option value="https://bbs.nga.cn/read.php?tid=17358638">[教程] 提取魔兽世界的编码文件和美工文件+替换技能图标+常用工具 NGA玩家社区</option>
-<option value="https://warcraft.huijiwiki.com/wiki/%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99%E4%BB%8B%E7%BB%8D">插件编写介绍 - 魔兽世界中文维基，自由编辑的魔兽资料库 - 灰机wiki</option>
-<option value="http://www.waitingfy.com/archives/1047">《魔兽世界插件》教程—21点扑克游戏 Blackjack | Waiting For You</option>
-</select>
-</td>
-</tr>
-<tr>
-<td>
-<select onchange="onSelectChange(this)">
-<option value="" disabled selected>其它</option>
-<option value="https://deerchao.cn/tutorials/regex/regex.htm">正则30分钟教程</option>
-<option value="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">使用hexo+github搭建免费个人博客详细教程</option>
-<option value="https://www.zhihu.com/question/28889256">哪一句日常用的英语很简单但是格调和品位很高？</option>
-</select>
-</td>
-</tr>
+<table id="favoriteTable">
 </table>
-<hr/>
+<hr>
 </div>
 </body>
 

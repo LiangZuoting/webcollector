@@ -1,0 +1,249 @@
+{
+"categories":[
+{
+"name":"公司",
+"sites":[
+{
+"title":"OA",
+"url":"https://oa.huya.com/index.html#/mains"
+},
+{
+"title":"日志后台",
+"url":"https://ffilelogweb.huya.com/indexpage.html"
+},
+{
+"title":"YY UID查询",
+"url":"http://webdb.yyembed.yy.com/webdb"
+},
+{
+"title":"jenkins构建",
+"url":"https://jenkins.huya.com/"
+},
+{
+"title":"看板-主播基础平台组-TAPD平台",
+"url":"https://www.tapd.cn/39551029/board/index?board_id=1139551029001000094&board_type=standard&view_type=standard-board"
+},
+{
+"title":"sre业务支持系统",
+"url":"https://sre.huya.com/"
+},
+{
+"title":"游戏直播管理后台",
+"url":"http://admin.huya.com/login/"
+}
+]
+},
+{
+"name":"C++",
+"sites":[
+{
+"title":"cppreference",
+"url":"https://en.cppreference.com/w/"
+},
+{
+"title":"C++ Core Guidelines",
+"url":"https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md"
+},
+{
+"title":"coliru在线编译",
+"url":"http://coliru.stacked-crooked.com/"
+},
+{
+"title":"7 Features of C++17 that will simplify your code",
+"url":"https://www.codingame.com/playgrounds/2205/7-features-of-c17-that-will-simplify-your-code/introduction"
+}
+]
+},
+{
+"name":"Unity",
+"sites":[
+{
+"title":"2018.4文档",
+"url":"https://docs.unity3d.com/2018.4/Documentation/Manual/"
+},
+{
+"title":"UGUI基础！界面拼接！",
+"url":"https://zhuanlan.zhihu.com/p/28905447"
+},
+{
+"title":"Unity - Manual: Execution Order of Event Functions",
+"url":"https://docs.unity3d.com/2018.2/Documentation/Manual/ExecutionOrder.html"
+},
+{
+"title":"Unity - Manual: Getting started with Android development",
+"url":"https://docs.unity3d.com/Manual/android-GettingStarted.html"
+},
+{
+"title":"Unity教程 用户界面（UI）_w3cschool",
+"url":"https://www.w3cschool.cn/unity3d_jc/unity3d_jc-8lea2dkb.html"
+},
+{
+"title":"Unity 2018.4 中文手册 中文文档",
+"url":"https://unity2018.docs.zlogn.com/"
+},
+{
+"title":"Unity Play Video On Canvas | Learn Unity Mir Imad Ahmed",
+"url":"https://www.mirimad.com/unity-play-video-on-canvas/"
+},
+{
+"title":"Video - Change/Detect video orientation",
+"url":"https://forum.unity.com/threads/change-detect-video-orientation.546450/"
+},
+{
+"title":"360 VIDEO PLAYER (with VR mode) - Unity Tutorial - YouTube",
+"url":"https://www.youtube.com/watch?v=RxlQnPcOoYc"
+}
+]
+},
+{
+"name":"Android",
+"sites":[
+{"url":"https://my.oschina.net/lifj/blog/709188","title":"［直播一揽子］x264 for Android 的编译"},
+{"url":"https://blog.csdn.net/chinabinlang/article/details/46898961","title":"X264的ARMV7-a的交叉编译及优化运行"},
+{"url":"https://blog.csdn.net/xyang81/article/details/42319789","title":"Android NDK开发Crash错误定位"},
+{"url":"https://www.jianshu.com/p/73fed068a795","title":"Android Camera2 使用总结"},
+{"url":"https://www.jianshu.com/p/d83161e77e90","title":"Android进阶——你所知道的Camera2和你所不知道的Camera2完全解析"},
+{"url":"https://source.android.com/devices/graphics/arch-egl-opengl","title":"EGLSurface 和 OpenGL ES  |  Android Open Source Project"},
+{"url":"https://www.jianshu.com/p/c085af435d88","title":"「音视频直播技术」Android下视频H264编码"},
+{"url":"https://juejin.im/post/5aefdb2c51882522835e6542","title":"《OpenGL ES 2.0 for Android》读书笔记"},
+{"url":"https://www.khronos.org/registry/EGL/","title":"Khronos EGL Registry - The Khronos Group Inc"},
+{"url":"https://developer.android.com/training/graphics/opengl/environment#java","title":"Build an OpenGL ES environment  |  Android Developers"},
+{"url":"https://source.android.com/devices/graphics/architecture.html","title":"图形架构  |  Android Open Source Project"},
+{"url":"https://blog.csdn.net/cmsbupt/article/details/9815685","title":"Android系统中YUV420p (NV21)到ARGB8888的转换"},
+{"url":"https://mp.weixin.qq.com/s/0xek4nnc2zoKpslEyILQmw?comefrom=https://blogread.cn/news/","title":"总是听到有人说AndroidX，到底什么是AndroidX？"},
+{"url":"https://developer.android.com/guide/topics/media/camera","title":"Camera API  |  Android Developers"},
+{"url":"https://developer.android.com/ndk/guides/audio/opensl/opensl-prog-notes.html#kotlin","title":"OpenSL ES 编程说明  |  Android NDK  |  Android Developers"},
+{"url":"https://developer.android.com/ndk/guides/audio/opensl/opensl-for-android","title":"面向 Android 的 OpenSL ES  |  Android NDK  |  Android Developers"},
+{"url":"https://developer.android.com/ndk/guides/stable_apis","title":"Android NDK 原生 API  |  Android Developers"},
+{"url":"http://www.soomal.com/doc/10100006276.htm","title":"Gabor、Patrick作品 - Android的10毫秒问题 解读Android系统音频通道延迟缺陷[Soomal]"},
+{"url":"https://developer.android.com/ndk/guides/audio/audio-latency?hl=zh-cn","title":"音频延迟  |  Android NDK  |  Android Developers"}
+]
+},
+{
+"name":"TCP/IP",
+"sites":[
+{"url":"https://gist.github.com/gabrielfalcao/4216897","title":"TCP socket error codes"},
+{"url":"https://blog.csdn.net/tianlongtc/article/details/80238497","title":"TCP快速重传为什么是三次冗余ack"},
+{"url":"https://www.zhihu.com/question/21789252","title":"TCP快速重传为什么是三次冗余ack，这个三次是怎么定下来的？"},
+{"url":"https://www.cnblogs.com/wetest/p/9190786.html","title":"可靠UDP，KCP协议快在哪？"},
+{"url":"https://blog.csdn.net/qq_36748278/article/details/80171575","title":"KCP原理及源码解析"},
+{"url":"https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md","title":"Checking out and Building Chromium for Windows"},
+{"url":"http://jagt.github.io/clumsy/cn/manual.html","title":"clumsy, 在 Windows Vista / Windows 7 下模拟劣化网络环境(网络延迟，掉包，重发)的小工具。"},
+{"url":"https://zhuanlan.zhihu.com/p/32553477","title":"科普：QUIC协议原理分析"}
+]
+},
+{
+"name":"iOS",
+"sites":[
+{"url":"https://www.jianshu.com/p/eccdcf43d7d2","title":"iOS视频开发（一）：视频采集"},
+{"url":"https://blog.csdn.net/lincsdnnet/article/details/78255773","title":"iOS - 视频采集详解"},
+{"url":"https://www.jianshu.com/p/9809760654ea","title":"iOS-镜头采集(AVCaptureDevice)"},
+{"url":"https://www.jianshu.com/p/019f59a37e1e","title":"iOS-镜头采集(Camera capture&amp;AVCaptureSession)"},
+{"url":"https://www.jianshu.com/p/d99366dd19e4","title":"iOS 相机捕捉"},
+{"url":"https://www.jianshu.com/p/8b28892bae5a","title":"30分钟搞定iOS自定义相机"},
+{"url":"https://www.jianshu.com/p/8c7ca1dd7f02","title":"iOS-AVFoundation自定义相机详解"},
+{"url":"https://stackoverflow.com/questions/588866/whats-the-difference-between-the-atomic-and-nonatomic-attributes","title":"ios - What&#39;s the difference between the atomic and nonatomic attributes? - Stack Overflow"},
+{"url":"https://github.com/skyming/iOS-Performance-Optimization","title":"skyming/iOS-Performance-Optimization: 关于iOS 性能优化梳理、内存泄露、卡顿、网络、GPU、电量、 App 包体积瘦身、启动速度优化等、Instruments 高级技巧、常见的优化技能- Get — Edit"},
+{"url":"https://github.com/qinjx/30min_guides/blob/master/ios.md","title":"30min_guides/ios.md at master · qinjx/30min_guides"},
+{"url":"https://stackoverflow.com/questions/5887248/ios-app-maximum-memory-budget","title":"iphone - ios app maximum memory budget - Stack Overflow"},
+{"url":"https://blog.csdn.net/bxjie/article/details/39581565","title":"关于airplay协议实现镜像功能研究"},
+{"url":"https://depthlove.github.io/2015/09/16/build-X264-library-for-iOS-platform/","title":"编译iOS平台上使用的X264库 | Minmin.Sun Blog"}
+]
+},
+{
+"name":"OpenGL ES",
+"sites":[
+{"url":"http://toughcoder.net/blog/2018/07/31/introduction-to-opengl-es-2-dot-0/","title":"年轻人的第一篇OpenGL ES 2.0教程"},
+{"url":"https://blog.csdn.net/kesalin/column/info/opengl-es2-ios","title":"OpenGL ES 2.0 iOS教程"}
+]
+},
+{
+"name":"Kotlin",
+"sites":[
+{"url":"https://www.kotlincn.net/docs/tutorials/android-plugin.html","title":"Kotlin Android扩展"}
+]
+},
+{
+"name":"多媒体",
+"sites":[
+{"url":"http://blog.csdn.net/leixiaohua1020","title":"雷神博客"},
+{"url":"http://blog.csdn.net/u011270282/article/details/42058617","title":"h.264保存flv文件"},
+{"url":"http://blog.csdn.net/yeyumin89/article/details/7932368","title":"将h.264视频流封装成flv格式文件（一.flv格式）"},
+{"url":"http://blog.csdn.net/yeyumin89/article/details/7932431","title":"将h.264视频流封装成flv格式文件（二.开始动手）"},
+{"url":"https://segmentfault.com/a/1190000007361184","title":"FLV文件格式解析"},
+{"url":"http://blog.csdn.net/leixiaohua1020/article/details/17934487","title":"视音频编解码学习工程：FLV封装格式分析器"},
+{"url":"http://www.tuicool.com/articles/vu2Mvy","title":"FLV视频封装格式详解"},
+{"url":"http://blog.csdn.net/zhuweigangzwg/article/details/25815851","title":"音视频同步(播放)原理"},
+{"url":"http://developer.t-firefly.com/thread-5731-1-1.html","title":"音视频同步和视频帧率控制的原理和实现"},
+{"url":"http://blog.csdn.net/Byeweiyang/article/details/78134674","title":"实时视频传输的关键技术 H.264 全解析"},
+{"url":"http://blog.csdn.net/shangmingyang/article/details/50837852","title":"带你吃透RTMP"},
+{"url":"http://blog.csdn.net/liuxingen/article/details/45420455","title":"字节序(byte order)和位序(bit order)"},
+{"url":"https://blog.csdn.net/leixiaohua1020/article/details/11694129","title":"RTMP规范简单分析"},
+{"url":"https://my.oschina.net/u/213072/blog/52053","title":"FLV视频封装格式详解"},
+{"url":"https://depthlove.github.io/2015/11/13/flv-analysis-in-rtmp-live-play/","title":"rtmp直播推流（一）－－flv格式解析与封装 | Minmin.Sun Blog"},
+{"url":"https://blog.csdn.net/sphone89/article/details/17492433","title":"h264 profile &amp; level"},
+{"url":"http://www.lighterra.com/papers/videoencodingh264/","title":"Video Encoding Settings for H.264 Excellence"}
+]
+},
+{
+"name":"FFmpeg",
+"sites":[
+{"url":"https://blog.csdn.net/leixiaohua1020","title":"雷神博客"},
+{"url":"https://www.ffmpeg.org/ffmpeg-filters.html#format-1","title":"FFmpeg Filters Documentation"},
+{"url":"https://blog.csdn.net/fireroll/article/details/8607954","title":"为ffmpeg添加自定义滤镜"},
+{"url":"https://blog.csdn.net/dancing_night/article/details/46348515","title":"把自定义的demuxer加入ffmpeg源码"},
+{"url":"https://blog.csdn.net/wstarx/article/details/1572393","title":"FFMpeg框架代码阅读"},
+{"url":"https://blog.csdn.net/m0_37402140/article/details/77963538","title":"ffmpeg八大模块及常用函数介绍"},
+{"url":"https://blog.csdn.net/leixiaohua1020/article/details/15811977","title":"[总结]FFMPEG视音频编解码零基础学习方法"},
+{"url":"https://juejin.im/post/5cad73425188251aee3a5624","title":"三、ffplay、ffmpeg日常食用的简单姿势"},
+{"url":"https://blog.csdn.net/Contex_A17/article/details/82014826","title":"ffmpeg倒放音视频"},
+{"url":"https://blog.csdn.net/vbLittleBoy/article/details/8587745","title":"关于ffmpeg如何提取视频的关键帧的问题"},
+{"url":"https://www.jianshu.com/p/0f2d762c4d1d","title":"FFMpeg中seek函数解析"},
+{"url":"https://blog.csdn.net/leixiaohua1020/article/details/44220151","title":"FFmpeg源代码结构图 - 解码"},
+{"url":"https://blog.csdn.net/CHNIM/article/details/80852806","title":"ffmpeg实现视频倒播（基于opencv方法）"},
+{"url":"https://stackoverflow.com/questions/42257354/concat-a-video-with-itself-but-in-reverse-using-ffmpeg","title":"Concat a video with itself, but in reverse, using ffmpeg - Stack Overflow"},
+{"url":"https://blog.csdn.net/ternence_hsu/article/details/85865718","title":"ffmpeg 视频倍速播放 和 慢速播放"},
+{"url":"https://zhuanlan.zhihu.com/p/44615185","title":"ffplay音视频同步分析——基础概念"},
+{"url":"https://juejin.im/post/5cad790f51882518b87e1404","title":"十、详解FFplay音视频同步"},
+{"url":"https://blog.csdn.net/lrzkd/article/details/78661841","title":"ffplay播放器音视频同步原理"},
+{"url":"https://my.oschina.net/u/735973/blog/806117","title":"ffmpeg音视频同步---视频同步到音频时钟"},
+{"url":"https://superuser.com/questions/1189472/make-a-clip-from-a-video-with-ffmpeg","title":"Make a clip from a video with FFMPEG"}
+]
+},
+{
+"name":"CMake",
+"sites":[
+{"url":"https://www.cnblogs.com/zl1991/p/6526613.html","title":"CMakeLists.txt写法"},
+{"url":"https://elloop.github.io/tools/2016-04-10/learning-cmake-2-commands","title":"CMake 常用命令和变量"},
+{"url":"https://blog.csdn.net/a794226986/article/details/18616511","title":"cmake处理多源文件目录的方法"},
+{"url":"https://stackoverflow.com/questions/52183875/create-cmake-c-c-library-to-android-without-android-studio","title":"Create (Cmake) C/C++ Library to Android without Android Studio"},
+{"url":"https://owent.net/2017/1405.html","title":"用cmake交叉编译到iOS和Android"},
+{"url":"https://fucknmb.com/2017/06/27/cmake-%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/","title":"cmake交叉编译"},
+{"url":"https://zhuanlan.zhihu.com/p/24535328","title":"更简单的CMake交叉编译"}
+]
+},
+{
+"name":"Lua",
+"sites":[
+{"url":"https://www.w3cschool.cn/doc_lua_5_3/dict","title":"Lua 5.3 词典 速查词典|Lua 5.3 词典 API中文手册|Lua 5.3 词典参考文档_w3cschool"},
+{"url":"https://wowwiki.fandom.com/wiki/WoW_AddOn","title":"WoW AddOn | WoWWiki | FANDOM powered by Wikia"},
+{"url":"https://wowwiki.fandom.com/wiki/UI_FAQ/AddOn_Author_Resources#Resources","title":"UI FAQ/AddOn Author Resources | WoWWiki | FANDOM powered by Wikia"},
+{"url":"https://bbs.nga.cn/read.php?tid=14839516","title":"[狂暴][PVE]8.2争霸艾泽拉斯狂暴专精指南[08/20更新狂暴战8.2版本木桩讲解视频] NGA玩家社区"},
+{"url":"http://wowprogramming.com/","title":"Home Page - World of Warcraft Programming: A Guide and Reference for Creating WoW Addons"},
+{"url":"https://github.com/LewisJEllis/awesome-lua","title":"LewisJEllis/awesome-lua: A curated list of quality Lua packages and resources."},
+{"url":"https://luarocks.org/","title":"LuaRocks - The Lua package manager"},
+{"url":"https://bbs.nga.cn/read.php?tid=17358638","title":"[教程] 提取魔兽世界的编码文件和美工文件+替换技能图标+常用工具 NGA玩家社区"},
+{"url":"https://warcraft.huijiwiki.com/wiki/%E6%8F%92%E4%BB%B6%E7%BC%96%E5%86%99%E4%BB%8B%E7%BB%8D","title":"插件编写介绍 - 魔兽世界中文维基，自由编辑的魔兽资料库 - 灰机wiki"},
+{"url":"http://www.waitingfy.com/archives/1047","title":"《魔兽世界插件》教程—21点扑克游戏 Blackjack | Waiting For You"}
+]
+},
+{
+"name":"其它",
+"sites":[
+{"url":"https://deerchao.cn/tutorials/regex/regex.htm","title":"正则30分钟教程"},
+{"url":"https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html","title":"使用hexo+github搭建免费个人博客详细教程"},
+{"url":"https://www.zhihu.com/question/28889256","title":"哪一句日常用的英语很简单但是格调和品位很高？"}
+]
+}
+]
+}
