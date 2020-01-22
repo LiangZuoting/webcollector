@@ -21,7 +21,33 @@ let param = document.getElementById("searchKey").value
 window.open("https://www.baidu.com/s?wd=" + param, "_blank")
 }
 
-function onLoad() {
+function loadOftenUse() {
+let request = new XMLHttpRequest();
+request.open("get", "oftenuse.json");
+request.responseType = "text";
+request.send();
+request.onload = function() {
+let table = document.getElementById("oftenTable");
+let data = request.response;
+let root = JSON.parse(data);
+let sites = root["sites"];
+let row;
+for (let i = 0; i < sites.length; ++i) {
+if (i % 6 == 0) {
+row = table.insertRow(i / 6);
+}
+let cell = row.insertCell(i % 6);
+let site = sites[i];
+let a = document.createElement("a");
+cell.appendChild(a);
+a.href = site.url;
+a.text = site.title;
+a.target = "_blank";
+}
+};
+}
+
+function loadFavorite() {
 let request = new XMLHttpRequest();
 request.open("get", "favorite.json");
 request.responseType = "text";
@@ -37,7 +63,7 @@ let category = categories[i];
 if (i % 4 == 0) {
 row = table.insertRow(i / 4);
 }
-let cell = row.insertCell(0);
+let cell = row.insertCell(i % 4);
 let sel = document.createElement("select");
 cell.appendChild(sel);
 sel.addEventListener("change", function() {
@@ -60,6 +86,11 @@ op.text = site.title;
 }
 };
 }
+
+function onLoad() {
+loadOftenUse();
+loadFavorite();
+}
 </script>
 
 <link rel="stylesheet" href="navi.css">
@@ -76,32 +107,8 @@ op.text = site.title;
 
 <div>
 <h2>常用网址</h2>
-<table>
-<tr>
-<td><a href="https://aplus.huya.com/#/home/buildProject/index" target="_blank">构建系统</a></td>
-<td><a href="https://ermao.live/" target="_blank">我的博客</a></td>
-<td><a href="https://github.com/" target="_blank">github</a></td>
-<td><a href="https://stackoverflow.com/" target="_blank">stackoverflow</a></td>
-<td><a href="https://en.cppreference.com/w/" target="_blank">cppreference</a></td>
-<td><a href="https://www.ffmpeg.org/documentation.html" target="_blank">Ffmpeg文档</a></td>
-</tr>
-<tr>
-<td><a href="https://tech.sina.com.cn/" target="_blank">新浪科技</a></td>
-<td><a href="https://maimai.cn/gossip_list" target="_blank">脉脉</a></td>
-</tr>
-<tr>
-<td><a href="https://www.zhihu.com/" target="_blank">知乎</a></td>
-<td><a href="https://weibo.com/liangzuoting/home?wvr=5" target="_blank">微博</a></td>
-<td><a href="https://v.qq.com/" target="_blank">腾讯视频</a></td>
-<td><a href="https://www.youku.com/" target="_blank">优酷</a></td>
-<td><a href="https://www.douyu.com/62081" target="_blank">叶落直播间</a></td>
-<td><a href="https://www.huya.com/11352915" target="_blank">老白涮肉坊</a></td>
-</tr>
-<tr>
-<td><a href="https://www.tmall.com/" target="_blank">天猫</a></td>
-<td><a href="https://www.taobao.com/" target="_blank">淘宝</a></td>
-<td><a href="https://www.ctrip.com/" target="_blank">携程</a></td>
-</tr>
+<table id="oftenTable">
+
 </table>
 <hr>
 </div>

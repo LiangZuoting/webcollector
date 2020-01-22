@@ -1,0 +1,21 @@
+{
+"sites":[
+{"url":"https://aplus.huya.com/#/home/buildProject/index", "title":"构建系统"},
+{"url":"https://ermao.live/", "title":"我的博客"},
+{"url":"https://github.com/", "title":"github"},
+{"url":"https://stackoverflow.com/", "title":"stackoverflow"},
+{"url":"https://en.cppreference.com/w/", "title":"cppreference"},
+{"url":"https://www.ffmpeg.org/documentation.html", "title":"FFmpeg文档"},
+{"url":"https://tech.sina.com.cn/", "title":"新浪科技"},
+{"url":"https://maimai.cn/gossip_list", "title":"脉脉"},
+{"url":"https://www.zhihu.com/", "title":"知乎"},
+{"url":"https://weibo.com/liangzuoting/home?wvr=5", "title":"微博"},
+{"url":"https://v.qq.com/", "title":"腾讯视频"},
+{"url":"https://www.youku.com/", "title":"优酷"},
+{"url":"https://www.douyu.com/62081", "title":"叶落直播间"},
+{"url":"https://www.huya.com/11352915", "title":"老白涮肉坊"},
+{"url":"https://www.tmall.com/", "title":"天猫"},
+{"url":"https://www.taobao.com/", "title":"淘宝"},
+{"url":"https://www.ctrip.com/", "title":"携程"}
+]
+}
