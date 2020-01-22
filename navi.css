@@ -1,9 +1,9 @@
 body {
     background-color:#555555;
-    font-family:Microsoft YaHei;
+    font-family: "Source Code Pro", monospace, "Microsoft YaHei";
 }
 
-div {
+.default-div {
     width: 100%;
     text-align: center;
     padding-top: 40px;
@@ -61,7 +61,7 @@ input {
 	background-color:#bf6516;
 }
 
-h1, h2, h3, h4 {
+h2 {
     color:#eeeeee;
 }
 
@@ -86,7 +86,6 @@ a:active, a:hover {
 a {
     background: transparent;
     text-decoration:none;
-    font-size: 20px;
     color: #1b1;
 }
 
