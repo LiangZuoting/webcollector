@@ -61,6 +61,7 @@ row = table.insertRow(i / 4);
 }
 let cell = row.insertCell(i % 4);
 let sel = document.createElement("select");
+sel.className = "common-select";
 cell.appendChild(sel);
 sel.addEventListener("change", function() {
 window.open(sel.value, "_blank");
