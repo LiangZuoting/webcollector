@@ -1,4 +1,4 @@
-set destpath=C:\Users\lw\OneDrive\blog\source\navi\
+set destpath=C:\Users\Administrator\OneDrive\blog\public\navi
 
 xcopy /y navi.css %destpath%
 xcopy /y favorite.json %destpath%
