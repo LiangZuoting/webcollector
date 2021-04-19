@@ -1,4 +1,4 @@
-# webcollector
+# DEPRECATED
 自用网址导航
 
 **废弃，[新的导航网址](https://github.com/LiangZuoting/WebCollector2)放到独立主机上了。**
